@@ -2,7 +2,7 @@
   "date": "2026-04-21",
   "passage": {
     "ref": "창세기 28:1-22",
-    "theme": "임재/성령"
+    "theme": "위로/인도"
   },
   "bible": {
     "ref": "창세기 28:1-22",
@@ -189,30 +189,30 @@
   },
   "wesley": {
     "background": [
-      "본문은 밧단아람으로 도피하는 야곱이 벧엘에서 하나님의 언약을 확인받는 전환점입니다.",
-      "아브라함에게 주신 복이 야곱을 통해 계승됨으로써 언약적 신앙의 정통성을 확립합니다.",
-      "외롭고 두려운 광야 길에서 하나님이 함께하심을 경험하는 은혜의 사건입니다."
+      "야곱이 에서를 피해 도피하는 중에도 이삭에게 축복받고 약혼 상대를 찾아 떠나는 여정입니다.",
+      "하나님께서 아브라함과 이삭에게 주신 언약을 야곱에게 재확인하며 함께하심을 보여줍니다.",
+      "야곱의 인격 변화와 하나님과의 관계 형성에 중요한 전환점이 되는 꿈의 계시입니다."
     ],
     "commentary": [
       {
+        "verse": 4,
+        "title": "언약의 계승",
+        "note": "이삭은 야곱에게 아브라함의 복이 이어지며 땅과 자손의 약속이 성취될 것을 축복합니다."
+      },
+      {
         "verse": 12,
-        "title": "사닥다리의 환상",
-        "note": "하나님과 인간을 잇는 중보자 그리스도와 천사들의 사역을 보여주는 은혜의 통로입니다."
+        "title": "하늘 문 꿈",
+        "note": "야곱은 꿈에서 땅과 하늘을 잇는 사닥다리와 천사들을 보며 하나님의 임재를 경험합니다."
       },
       {
         "verse": 15,
-        "title": "임마누엘의 약속",
-        "note": "하나님은 우리의 형편과 관계없이 약속하신 모든 것을 이루실 때까지 떠나지 않으십니다."
+        "title": "함께하시는 약속",
+        "note": "하나님은 야곱이 어디로 가든지 함께하며 지키시고 다시 돌아오게 할 것을 분명히 약속하십니다."
       },
       {
-        "verse": 16,
-        "title": "하나님의 임재",
-        "note": "야곱은 외딴 광야에서 비로소 어디에나 계시는 하나님의 충만한 임재를 깨닫게 되었습니다."
-      },
-      {
-        "verse": 20,
-        "title": "신앙의 서원",
-        "note": "하나님의 보호를 확신한 야곱이 감사와 헌신으로 하나님을 자신의 주인으로 고백함입니다."
+        "verse": 22,
+        "title": "십일조 서원",
+        "note": "야곱은 하나님의 인도하심에 감사하며, 받은 복의 십분의 일을 하나님께 드리겠다고 서원합니다."
       }
     ]
   },
@@ -246,33 +246,33 @@
     ]
   },
   "praise_response": {
-    "number": 796,
-    "title": "빈 들에 마른 플 같이",
-    "first_line": "빈 들에 마른 플 같이",
-    "key": "A",
+    "number": 264,
+    "title": "선한 목자 되신 우리 주",
+    "first_line": "선한 목자 되신 우리 주",
+    "key": "D",
     "tempo": "찬송가",
     "tempo_category": "hymn",
     "lyrics": {},
-    "primary_theme": "임재/성령",
+    "primary_theme": "위로/인도",
     "secondary_themes": [
-      "결단/헌신",
-      "소망"
+      "사랑/은혜",
+      "고백/신앙"
     ],
     "themes_all": [
-      "임재/성령",
-      "결단/헌신",
-      "소망"
+      "위로/인도",
+      "사랑/은혜",
+      "고백/신앙"
     ],
     "youtube": {
-      "url": "https://www.youtube.com/watch?v=4nxsa6abTak",
-      "embed_url": "https://www.youtube.com/embed/4nxsa6abTak",
-      "title": "빈 들에 마른 풀 같이 (찬송가 183장/피아버전) / THERE SHALL BE SHOWERS OF BLESSING (FIA.ver) - 피아워십",
+      "url": "https://www.youtube.com/watch?v=2pCxsWUa6Zk",
+      "embed_url": "https://www.youtube.com/embed/2pCxsWUa6Zk",
+      "title": "F.I.A LIVE WORSHIP - 선한 목자 되신 우리 주 (찬송가 569장/피아버전) / SAVIOUR, LIKE A SHEPHERD LEAD US (FIA.ver)",
       "channel": "F.I.A",
       "found_preferred": false
     },
     "sheet_images": [
-      "/sheets/song-796.webp"
+      "/sheets/song-264.webp"
     ]
   },
-  "built_at": "2026-04-21T00:28:23.073617+09:00"
+  "built_at": "2026-04-21T03:15:45.275218+09:00"
 }
