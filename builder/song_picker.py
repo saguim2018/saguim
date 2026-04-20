@@ -85,7 +85,7 @@ class SongPicker:
 - 오직 카테고리 이름 하나만 응답 (설명 없이)
 """
         import time
-        client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
+        client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
         response = None
         for model in ["gemini-2.5-flash", "gemini-flash-lite-latest"]:
             delay = 30

@@ -52,7 +52,7 @@ def generate_commentary(passage_ref: str, bible_text_revised: list[dict]) -> dic
     bible_lines = "\n".join(f"{v['v']} {v['text']}" for v in bible_text_revised)
     prompt = USER_PROMPT.format(passage_ref=passage_ref, bible_text=bible_lines)
 
-    client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     delay = 30
     for model in [MODEL, _FALLBACK_MODEL]:
         for attempt in range(3):
