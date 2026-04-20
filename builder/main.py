@@ -14,13 +14,13 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import bible_fetcher, commentary, youtube_search
-from .reading_plan import ReadingPlan
+from .reading_plan import get_passage_ref
 from .song_picker import SongPicker
 from .history import History
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
-READING_PLAN = DATA_DIR / "reading_plan.yaml"
+BUILDER_PREFS = DATA_DIR / "builder_prefs.json"
 SONGBOOK = DATA_DIR / "songbook_tagged.json"
 HISTORY_FILE = DATA_DIR / "history.json"
 OUT_DIR = DATA_DIR / "daily"
@@ -41,14 +41,22 @@ def _sheet_image_paths(song: dict) -> list[str]:
     return [f"/sheets/song-{num}-p{i + 1}.webp" for i in range(page_count)]
 
 
+def _load_allowed_tempos() -> list[str]:
+    try:
+        with open(BUILDER_PREFS, encoding="utf-8") as f:
+            return json.load(f).get("allowed_tempos", ["slow"])
+    except (FileNotFoundError, KeyError, ValueError):
+        return ["slow"]
+
+
 def build(target: date, dry_run: bool = False) -> dict:
     print(f"[빌드 시작] {target.isoformat()} (KST)")
 
-    plan = ReadingPlan(READING_PLAN)
-    picker = SongPicker(SONGBOOK)
+    allowed_tempos = _load_allowed_tempos()
+    picker = SongPicker(SONGBOOK, allowed_tempos=allowed_tempos)
     hist = History(HISTORY_FILE)
 
-    passage_ref = plan.get_passage_ref(target)
+    passage_ref = get_passage_ref(target)
     print(f"  본문: {passage_ref}")
 
     print("  성경 본문 가져오는 중...")

@@ -15,12 +15,28 @@ from google import genai
 THEMES = ["감사", "회개", "경배", "임재/성령", "구원/십자가", "사랑/은혜",
           "소망", "결단/헌신", "선교/전도", "고백/신앙", "위로/인도", "축복"]
 
+TEMPO_MAP: dict[str, list[str]] = {
+    "slow": ["찬송가", "3박자"],
+    "medium": ["A", "B"],
+    "fast": ["C", "축복송"],
+}
+DEFAULT_TEMPOS = ["slow"]
+
 
 class SongPicker:
-    def __init__(self, songbook_path: Path, seed: int | None = None):
+    def __init__(self, songbook_path: Path, seed: int | None = None,
+                 allowed_tempos: list[str] | None = None):
         with open(songbook_path, encoding="utf-8") as f:
             self.songbook = json.load(f)["songs"]
         self.rng = random.Random(seed)
+        tempos = allowed_tempos if allowed_tempos else DEFAULT_TEMPOS
+        allowed_types: set[str] = set()
+        for t in tempos:
+            allowed_types.update(TEMPO_MAP.get(t, []))
+        self._allowed_types = allowed_types
+
+    def _tempo_ok(self, song: dict) -> bool:
+        return song.get("type") in self._allowed_types
 
     def pick_two(self, passage_ref: str, bible_text: list[dict],
                   recent_numbers: list[int]) -> dict:
@@ -45,14 +61,16 @@ class SongPicker:
         primary_matches = [s for s in self.songbook.values()
                            if s.get("primary_theme") == theme
                            and s["number"] not in excluded
-                           and s.get("pages")]
+                           and s.get("pages")
+                           and self._tempo_ok(s)]
         if primary_matches:
             return self.rng.choice(primary_matches)
 
         secondary_matches = [s for s in self.songbook.values()
                              if theme in (s.get("secondary_themes") or [])
                              and s["number"] not in excluded
-                             and s.get("pages")]
+                             and s.get("pages")
+                             and self._tempo_ok(s)]
         if secondary_matches:
             return self.rng.choice(secondary_matches)
 
@@ -61,7 +79,8 @@ class SongPicker:
                 fb_matches = [s for s in self.songbook.values()
                               if s.get("primary_theme") == fb
                               and s["number"] not in excluded
-                              and s.get("pages")]
+                              and s.get("pages")
+                              and self._tempo_ok(s)]
                 if fb_matches:
                     return self.rng.choice(fb_matches)
 
