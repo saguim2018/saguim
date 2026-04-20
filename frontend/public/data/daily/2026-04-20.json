@@ -85,90 +85,88 @@
   },
   "wesley": {
     "background": [
-      "본 시편은 포로 귀환 이후 성전 재건과 회복의 감격을 노래하는 공동체의 찬양 시입니다.",
-      "하나님을 창조주이자 왕으로 고백하며, 그분의 통치 아래 거하는 성도들의 영광을 다룹니다.",
-      "승리하신 하나님의 공의로운 심판을 성도들의 승리로 선포하는 종말론적 희망이 담겨 있습니다."
+      "본 시편은 바벨론 포로에서 귀환한 이스라엘 공동체가 하나님의 구원과 통치를 찬양하는 승리의 노래입니다.",
+      "성도의 모임 가운데 선포되는 새 노래는 신실한 백성에게 베푸신 하나님의 현재적 은혜를 반영합니다.",
+      "하나님의 공의로운 심판을 수행하는 성도의 영적 무장을 통해 교회의 승리적 삶을 가르칩니다."
     ],
     "commentary": [
       {
         "verse": 1,
         "title": "새 노래의 은혜",
-        "note": "구원의 새로운 역사를 경험한 성도들이 모여 하나님께 드리는 진실하고 뜨거운 찬양을 의미합니다."
+        "note": "이전의 고통을 잊게 하시는 하나님의 새로운 구원을 경험한 성도가 드리는 감격 어린 찬양입니다."
       },
       {
         "verse": 4,
         "title": "겸손한 자의 구원",
-        "note": "하나님은 자기 백성을 기뻐하시며, 낮아진 마음으로 주를 의지하는 이들에게 구원의 영광을 입히십니다."
+        "note": "하나님은 자기를 낮추고 오직 주님만을 의지하는 성도를 기뻐하시며 구원으로 아름답게 단장하십니다."
       },
       {
         "verse": 5,
-        "title": "침상에서의 찬양",
-        "note": "성도의 기쁨은 공적 예배뿐만 아니라 일상의 쉼터인 침상에서도 그치지 않는 지속적인 즐거움입니다."
+        "title": "침상에서의 노래",
+        "note": "낮뿐만 아니라 밤에도, 고요한 자리에서도 성도는 하나님의 영광을 묵상하며 기쁨을 노래해야 합니다."
       },
       {
         "verse": 6,
-        "title": "입과 손의 신앙",
-        "note": "성도의 입에는 하나님의 찬양이, 손에는 주의 공의를 수행할 영적인 권세가 들려 있어야 합니다."
+        "title": "찬양과 칼의 조화",
+        "note": "입으로는 하나님을 찬미하고 손으로는 말씀의 검을 들어 악한 세력과 영적 싸움을 감당하는 모습입니다."
       }
     ]
   },
   "praise_thanks": {
-    "number": 618,
-    "title": "내 영혼이 은총 입어",
-    "first_line": "내 영혼이 은총 입어",
-    "key": "G",
-    "tempo": "찬송가",
-    "tempo_category": "hymn",
-    "lyrics": {},
-    "primary_theme": "감사",
-    "secondary_themes": [
-      "사랑/은혜",
-      "고백/신앙"
-    ],
-    "themes_all": [
-      "감사",
-      "사랑/은혜",
-      "고백/신앙"
-    ],
-    "youtube": {
-      "url": "https://www.youtube.com/watch?v=s_12sB7ciuM",
-      "embed_url": "https://www.youtube.com/embed/s_12sB7ciuM",
-      "title": "내 영혼이 은총 입어 (찬송가 438장/피아버전) / SINCE CHRIST MY SOUL FROM SIN SET FREE (FIA.ver) - 피아워십",
-      "channel": "F.I.A",
-      "found_preferred": false
-    },
-    "sheet_images": [
-      "/sheets/song-618.webp"
-    ]
-  },
-  "praise_response": {
-    "number": 333,
-    "title": "내 마음을 가득 채운",
-    "first_line": "내 마음을 가득 채운",
+    "number": 335,
+    "title": "감사함으로",
+    "first_line": "여호와를 즐거이 불러",
     "key": "E",
     "tempo": "B",
     "tempo_category": "medium",
     "lyrics": {},
-    "primary_theme": "경배",
+    "primary_theme": "감사",
     "secondary_themes": [
-      "고백/신앙",
-      "사랑/은혜"
+      "경배"
     ],
     "themes_all": [
-      "경배",
-      "고백/신앙",
-      "사랑/은혜"
+      "감사",
+      "경배"
     ],
     "youtube": {
-      "url": "https://www.youtube.com/watch?v=FLkzHYBgNHM",
-      "embed_url": "https://www.youtube.com/embed/FLkzHYBgNHM",
-      "title": "F.I.A LIVE WORSHIP - 내 마음을 가득 채운 (피아버전) / HERE I AM AGAIN (FIA.ver)",
+      "url": "https://www.youtube.com/watch?v=rmFeKxxElcA",
+      "embed_url": "https://www.youtube.com/embed/rmFeKxxElcA",
+      "title": "F.I.A LIVE WORSHIP - 감사함으로 (피아버전) / WITH THANKSGIVING (FIA.ver)",
       "channel": "F.I.A",
       "found_preferred": false
     },
     "sheet_images": [
-      "/sheets/song-333.webp"
+      "/sheets/song-335.webp"
     ]
   },
-  "built_at": "2026-04-20T22:32:35.532494+09:00"
+  "praise_response": {
+    "number": 441,
+    "title": "예배하는 이에게",
+    "first_line": "주님만이 나를 아시네",
+    "key": "F",
+    "tempo": "A",
+    "tempo_category": "slow",
+    "lyrics": {},
+    "primary_theme": "경배",
+    "secondary_themes": [
+      "고백/신앙",
+      "임재/성령"
+    ],
+    "themes_all": [
+      "경배",
+      "고백/신앙",
+      "임재/성령"
+    ],
+    "youtube": {
+      "url": "https://www.youtube.com/watch?v=hPisFBkvPxE",
+      "embed_url": "https://www.youtube.com/embed/hPisFBkvPxE",
+      "title": "F.I.A LIVE WORSHIP - 예배하는 이에게 (피아버전) | To Those Who Worship (FIA.ver)",
+      "channel": "F.I.A",
+      "found_preferred": false
+    },
+    "sheet_images": [
+      "/sheets/song-441.webp"
+    ]
+  },
+  "built_at": "2026-04-20T22:42:14.100269+09:00"
 }
