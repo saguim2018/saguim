@@ -85,40 +85,40 @@
   },
   "wesley": {
     "background": [
-      "본 시편은 바벨론 포로에서 귀환한 이스라엘 공동체가 하나님의 구원과 통치를 기뻐하며 부르는 찬양시입니다.",
-      "성도들이 주님의 위엄 앞에 거룩한 춤과 악기로 화답하는 공동체적 예배의 역동성을 생생하게 담고 있습니다.",
-      "하나님의 공의로운 심판을 통해 악을 멸하고 성도의 승리를 선포하는 종말론적 소망을 담고 있습니다."
+      "본 시편은 포로 귀환 이후 성전 재건과 회복의 감격을 노래하는 공동체의 찬양 시입니다.",
+      "하나님을 창조주이자 왕으로 고백하며, 그분의 통치 아래 거하는 성도들의 영광을 다룹니다.",
+      "승리하신 하나님의 공의로운 심판을 성도들의 승리로 선포하는 종말론적 희망이 담겨 있습니다."
     ],
     "commentary": [
       {
         "verse": 1,
         "title": "새 노래의 은혜",
-        "note": "이전의 슬픔을 뒤로하고 베푸신 새로운 구원을 인하여 성도들이 모여 마음을 다해 찬양해야 함을 뜻합니다."
+        "note": "구원의 새로운 역사를 경험한 성도들이 모여 하나님께 드리는 진실하고 뜨거운 찬양을 의미합니다."
       },
       {
         "verse": 4,
-        "title": "겸손한 자의 영광",
-        "note": "하나님은 자기를 낮추고 오직 주의 도우심만을 바라는 자를 기뻐하시며 구원의 은혜로 영화롭게 하십니다."
+        "title": "겸손한 자의 구원",
+        "note": "하나님은 자기 백성을 기뻐하시며, 낮아진 마음으로 주를 의지하는 이들에게 구원의 영광을 입히십니다."
       },
       {
         "verse": 5,
-        "title": "삶 속의 찬양",
-        "note": "공적인 예배뿐 아니라, 고요한 밤의 침상 위에서도 하나님의 선하심을 묵상하며 기쁨으로 노래해야 합니다."
+        "title": "침상에서의 찬양",
+        "note": "성도의 기쁨은 공적 예배뿐만 아니라 일상의 쉼터인 침상에서도 그치지 않는 지속적인 즐거움입니다."
       },
       {
         "verse": 6,
-        "title": "말씀의 검",
-        "note": "성도의 입에는 찬양이, 손에는 하나님의 말씀인 검이 들려있어 악한 세상을 대적하고 승리하게 하십니다."
+        "title": "입과 손의 신앙",
+        "note": "성도의 입에는 하나님의 찬양이, 손에는 주의 공의를 수행할 영적인 권세가 들려 있어야 합니다."
       }
     ]
   },
   "praise_thanks": {
-    "number": 599,
-    "title": "주님의 은혜 넘치네",
-    "first_line": "주 신실하심 놀라워",
+    "number": 618,
+    "title": "내 영혼이 은총 입어",
+    "first_line": "내 영혼이 은총 입어",
     "key": "G",
-    "tempo": "C",
-    "tempo_category": "fast",
+    "tempo": "찬송가",
+    "tempo_category": "hymn",
     "lyrics": {},
     "primary_theme": "감사",
     "secondary_themes": [
@@ -131,42 +131,44 @@
       "고백/신앙"
     ],
     "youtube": {
-      "url": "https://www.youtube.com/watch?v=VoWuFs0YNdM",
-      "embed_url": "https://www.youtube.com/embed/VoWuFs0YNdM",
-      "title": "F.I.A LIVE WORSHIP - 주님의 은혜 넘치네 (피아버전) / YOUR GRACE IS ENOUGH (FIA.ver)",
+      "url": "https://www.youtube.com/watch?v=s_12sB7ciuM",
+      "embed_url": "https://www.youtube.com/embed/s_12sB7ciuM",
+      "title": "내 영혼이 은총 입어 (찬송가 438장/피아버전) / SINCE CHRIST MY SOUL FROM SIN SET FREE (FIA.ver) - 피아워십",
       "channel": "F.I.A",
       "found_preferred": false
     },
     "sheet_images": [
-      "/sheets/song-599.webp"
+      "/sheets/song-618.webp"
     ]
   },
   "praise_response": {
-    "number": 775,
-    "title": "winning all",
-    "first_line": "온 세상 창조주",
-    "key": "A",
-    "tempo": "C",
-    "tempo_category": "fast",
+    "number": 333,
+    "title": "내 마음을 가득 채운",
+    "first_line": "내 마음을 가득 채운",
+    "key": "E",
+    "tempo": "B",
+    "tempo_category": "medium",
     "lyrics": {},
     "primary_theme": "경배",
     "secondary_themes": [
-      "고백/신앙"
+      "고백/신앙",
+      "사랑/은혜"
     ],
     "themes_all": [
       "경배",
-      "고백/신앙"
+      "고백/신앙",
+      "사랑/은혜"
     ],
     "youtube": {
-      "url": "https://www.youtube.com/watch?v=5rrz3yse2fk",
-      "embed_url": "https://www.youtube.com/embed/5rrz3yse2fk",
-      "title": "온 세상 창조주 (피아버전) / WINNING ALL (FIA.ver) - 피아워십",
+      "url": "https://www.youtube.com/watch?v=FLkzHYBgNHM",
+      "embed_url": "https://www.youtube.com/embed/FLkzHYBgNHM",
+      "title": "F.I.A LIVE WORSHIP - 내 마음을 가득 채운 (피아버전) / HERE I AM AGAIN (FIA.ver)",
       "channel": "F.I.A",
       "found_preferred": false
     },
     "sheet_images": [
-      "/sheets/song-775.webp"
+      "/sheets/song-333.webp"
     ]
   },
-  "built_at": "2026-04-20T19:01:39.752162+09:00"
+  "built_at": "2026-04-20T22:32:35.532494+09:00"
 }
