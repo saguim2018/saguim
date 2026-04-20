@@ -1,6 +1,22 @@
+import fs from "fs/promises";
+import path from "path";
 import { notFound } from "next/navigation";
 import { fetchDaily } from "@/lib/fetchDaily";
 import { todayKST } from "@/lib/dateUtils";
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const dir = path.join(process.cwd(), "public", "data", "daily");
+  try {
+    const files = await fs.readdir(dir);
+    return files
+      .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+      .map((f) => ({ date: f.replace(".json", "") }));
+  } catch {
+    return [];
+  }
+}
 import TopBar from "@/components/TopBar";
 import ShortPrayer from "@/components/ShortPrayer";
 import PraiseCard from "@/components/PraiseCard";
