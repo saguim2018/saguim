@@ -56,6 +56,6 @@ jobs:
             echo "변경 없음"
           else
             git commit -m "daily: $(date '+%Y-%m-%d')"
-            git pull --rebase origin main
+            git pull --rebase -X theirs origin main
             git push origin main
           fi
