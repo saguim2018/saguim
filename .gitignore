@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Env
+.env
+.env.local
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+
+# Original sheets location (scripts write here; actual files are in frontend/public/sheets/)
+public/sheets/
+
+# Intermediate builder output (copied to frontend/public/data/daily/ before commit)
+data/daily/
+
+# Test / debug artifacts
+build_out.txt
+dryrun_out*.txt
+bible_test*.json
+holybible_*.html
+
+# OS
+.DS_Store
+Thumbs.db

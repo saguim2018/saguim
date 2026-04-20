@@ -1,0 +1,60 @@
+name: Build daily liturgy
+
+on:
+  schedule:
+    - cron: "1 15 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "특정 날짜 재빌드 (YYYY-MM-DD). 비우면 오늘."
+        required: false
+        default: ""
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r builder/requirements.txt
+
+      - name: Build today's liturgy
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          TZ: Asia/Seoul
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            python -m builder.main --date "${{ github.event.inputs.date }}"
+          else
+            python -m builder.main
+          fi
+
+      - name: Copy JSON to frontend public
+        run: |
+          mkdir -p frontend/public/data/daily
+          cp data/daily/*.json frontend/public/data/daily/ 2>/dev/null || true
+
+      - name: Commit daily JSON
+        run: |
+          git config user.name "haru-liturgy-bot"
+          git config user.email "haru-liturgy-bot@users.noreply.github.com"
+          git add frontend/public/data/daily/ data/history.json
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "daily: $(date '+%Y-%m-%d')"
+            git push
+          fi

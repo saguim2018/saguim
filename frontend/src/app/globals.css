@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens */
+:root {
+  --bg: #FAF7F0;
+  --bg-secondary: #F2EEE3;
+  --text: #2A2623;
+  --text-secondary: #6B635B;
+  --text-tertiary: #A8A098;
+  --divider: rgba(42, 38, 35, 0.08);
+  --accent: #8B6F47;
+  --topbar-bg: rgba(250, 247, 240, 0.85);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A1715;
+    --bg-secondary: #24201C;
+    --text: #E8E2D5;
+    --text-secondary: #A8A098;
+    --text-tertiary: #6B635B;
+    --divider: rgba(232, 226, 213, 0.08);
+    --accent: #8B6F47;
+    --topbar-bg: rgba(26, 23, 21, 0.85);
+  }
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Pretendard", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: var(--font-noto-serif-kr), "Noto Serif KR", Georgia, serif;
+}
+
+.font-ui {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Pretendard", sans-serif;
+}
+
+/* Bible verse number */
+.verse-number {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  vertical-align: super;
+  margin-right: 2px;
+  line-height: 1;
+}
