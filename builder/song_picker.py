@@ -15,12 +15,8 @@ from google import genai
 THEMES = ["감사", "회개", "경배", "임재/성령", "구원/십자가", "사랑/은혜",
           "소망", "결단/헌신", "선교/전도", "고백/신앙", "위로/인도", "축복"]
 
-TEMPO_MAP: dict[str, list[str]] = {
-    "slow": ["찬송가", "3박자"],
-    "medium": ["A", "B"],
-    "fast": ["C", "축복송"],
-}
-DEFAULT_TEMPOS = ["slow"]
+ALL_TEMPOS = ["A", "B", "C", "찬송가", "축복송", "3박자"]
+DEFAULT_TEMPOS = ["찬송가", "3박자"]
 
 
 class SongPicker:
@@ -29,14 +25,10 @@ class SongPicker:
         with open(songbook_path, encoding="utf-8") as f:
             self.songbook = json.load(f)["songs"]
         self.rng = random.Random(seed)
-        tempos = allowed_tempos if allowed_tempos else DEFAULT_TEMPOS
-        allowed_types: set[str] = set()
-        for t in tempos:
-            allowed_types.update(TEMPO_MAP.get(t, []))
-        self._allowed_types = allowed_types
+        self._allowed_tempos: set[str] = set(allowed_tempos if allowed_tempos else DEFAULT_TEMPOS)
 
     def _tempo_ok(self, song: dict) -> bool:
-        return song.get("type") in self._allowed_types
+        return song.get("tempo") in self._allowed_tempos
 
     def pick_two(self, passage_ref: str, bible_text: list[dict],
                   recent_numbers: list[int]) -> dict:

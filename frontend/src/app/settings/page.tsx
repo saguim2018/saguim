@@ -3,13 +3,17 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const TEMPO_OPTIONS = [
-  { key: "slow", label: "묵상", desc: "찬송가 · 3박자" },
-  { key: "medium", label: "CCM", desc: "A · B 템포" },
-  { key: "fast", label: "신나는", desc: "C · 축복송" },
+  { key: "A",    label: "A템포",  desc: "290곡 · 느린 CCM" },
+  { key: "B",    label: "B템포",  desc: "48곡 · 중간 CCM" },
+  { key: "C",    label: "C템포",  desc: "64곡 · 빠른 CCM" },
+  { key: "찬송가", label: "찬송가", desc: "41곡" },
+  { key: "축복송", label: "축복송", desc: "33곡" },
+  { key: "3박자", label: "3박자",  desc: "20곡 · 왈츠" },
 ] as const;
 
 type TempoKey = (typeof TEMPO_OPTIONS)[number]["key"];
 const STORAGE_KEY = "allowedTempos";
+const DEFAULT_TEMPOS: TempoKey[] = ["찬송가", "3박자"];
 
 function loadTempos(): TempoKey[] {
   try {
@@ -19,11 +23,11 @@ function loadTempos(): TempoKey[] {
       if (Array.isArray(parsed) && parsed.length > 0) return parsed as TempoKey[];
     }
   } catch {}
-  return ["slow"];
+  return DEFAULT_TEMPOS;
 }
 
 export default function SettingsPage() {
-  const [selected, setSelected] = useState<Set<TempoKey>>(new Set(["slow"]));
+  const [selected, setSelected] = useState<Set<TempoKey>>(new Set(DEFAULT_TEMPOS));
 
   useEffect(() => {
     setSelected(new Set(loadTempos()));
@@ -75,7 +79,7 @@ export default function SettingsPage() {
             찬양 템포
           </h2>
           <p className="font-ui text-sm mb-4" style={{ color: "var(--text-secondary)" }}>
-            선곡 풀에 포함할 템포 카테고리를 선택하세요. 최소 1개 이상 선택해야 합니다.
+            선곡 풀에 포함할 템포를 선택하세요. 최소 1개 이상 선택해야 합니다.
           </p>
           <div className="space-y-2">
             {TEMPO_OPTIONS.map(({ key, label, desc }) => (
@@ -84,7 +88,9 @@ export default function SettingsPage() {
                 className="flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer"
                 style={{
                   background: "var(--card-bg)",
-                  border: selected.has(key) ? "1.5px solid var(--accent)" : "1.5px solid transparent",
+                  border: selected.has(key)
+                    ? "1.5px solid var(--accent)"
+                    : "1.5px solid transparent",
                 }}
               >
                 <input
@@ -93,14 +99,12 @@ export default function SettingsPage() {
                   onChange={() => toggle(key)}
                   className="w-4 h-4 accent-[var(--accent)]"
                 />
-                <div className="flex-1">
-                  <span className="font-ui text-sm font-medium" style={{ color: "var(--text)" }}>
-                    {label}
-                  </span>
-                  <span className="font-ui text-xs ml-2" style={{ color: "var(--text-tertiary)" }}>
-                    {desc}
-                  </span>
-                </div>
+                <span className="font-ui text-sm font-medium" style={{ color: "var(--text)" }}>
+                  {label}
+                </span>
+                <span className="font-ui text-xs" style={{ color: "var(--text-tertiary)" }}>
+                  {desc}
+                </span>
               </label>
             ))}
           </div>
